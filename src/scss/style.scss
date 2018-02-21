@@ -1,0 +1,35 @@
+//Variable Declaration Zone
+$bg_main_img: "../img/keyboard-backlit.jpg";
+$overlay_tint_color: #59A3FC;
+$light_font_color: white;
+.main-landing {   
+    position: relative;     
+    background: url($bg_main_img);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    box-sizing: border-box;
+    .overlay {    
+        position: absolute;  
+        z-index: 0;          
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: $overlay_tint_color; 
+        opacity: 0.5;       
+    }
+    .main-content {     
+        box-sizing: border-box;   
+        position: absolute;
+        width: 100%;                
+        border: 1px solid blue;
+        .container {
+            height: 100vh;
+            padding-top: 25vh;  
+            .landing-content {
+                border-top: 5px solid $light_font_color;
+            }
+        }
+    }
+}
