@@ -7,22 +7,97 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <title>Welcome to comptuer club of SGSITS, Indore</title>
 </head>
 
-<body>    
+<body>
     <div class="main-landing">
         <div class="overlay"></div>
         <div class="main-content">
-            <div class="container">                
-                <div class="landing-content offset-lg-2 col-lg-8">                    
+            <div class="container">
+                <div class="animated flipInX landing-content offset-lg-2 col-lg-8">
+                    <div class="logo-content pb-3">Computer Club, Sgsits
+                        <br>
+                        <small>Presents ...</small>
+                    </div>
+                    <div class="event-name mb-4">Code with the flow</div>
+                    <div>
+                        <a href="#video-section" class="down-link link-light" id="go-down" type="button">
+                            <i class="fa fa-3x fa-angle-double-down"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <div id="video-section" class="container video-section">
+        <div class="row">
+            <div class="text-content col-lg-4">
+                <div class="text-box">
+                    <h2>Description</h2>
+                    <div class="text-hint">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dolor eveniet laudantium ipsam fugit ab esse eos numquam
+                        hic pariatur inventore velit sit odit voluptas qui animi, sunt voluptate distinctio!
+                    </div>
+                    <hr>
+                    <a href="#event-description-section" class="btn btn-outline-primary" id="go-down" type="button">
+                        More Description
+                    </a>
+                </div>
+            </div>
+            <div class="video-content col-lg-8">
+                <div class="video-box">
+                    <iframe class="youtube-frame animated infinite pulse" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="event-description-section" class="description-section">
+        <div class="container">
+            <div class="pt-5 mt-5 offset-lg-2 col-lg-8">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, harum quae! Sit dolor quasi quidem mollitia provident
+                labore at perspiciatis quod unde voluptatibus voluptates, quis hic suscipit expedita nemo laudantium!
+            </div>
+            <div class="prize-description mt-5 border offset-lg-2 col-lg-8 row">
+                <div class="col-lg-6 item pt-5 border-right">
+                    <i class="fa fa-3x fa-gift"></i>
+                    <div class="header">
+                        First Prize <br>
+                        <small class="text-hint">Prize worth</small>
+                    </div>
+                    <br>
+                    <div class="fa-2x">Rs 3000</div>                    
+                    <ul class="list">
+                        <li><i class="fa fa-check"></i> Description</li>                        
+                        <li><i class="fa fa-check"></i> Description</li>                        
+                        <li><i class="fa fa-check"></i> Description</li>                        
+                    </ul>
+                    <button class="btn btn-outline-success btn-lg">Participate</button>
+                </div>
+                <div class="col-lg-6 item pt-5">
+                        <i class="fa fa-3x fa-gift"></i>
+                        <div class="header">
+                            Second Prize <br>
+                            <small class="text-hint">Prize worth</small>
+                        </div>
+                        <br>
+                        <div class="fa-2x">Rs 3000</div>                    
+                        <ul class="list">
+                            <li><i class="fa fa-check"></i> Description</li>                        
+                            <li><i class="fa fa-check"></i> Description</li>                        
+                            <li><i class="fa fa-check"></i> Description</li>                        
+                        </ul>
+                        <button class="btn btn-outline-success btn-lg">Participate</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

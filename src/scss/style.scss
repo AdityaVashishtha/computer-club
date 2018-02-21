@@ -1,34 +1,160 @@
+//font family import 
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai|Forum|Gloria+Hallelujah|Handlee|Indie+Flower|Nanum+Brush+Script|Neucha|Pontano+Sans|Raleway');
+//font usage Example
+// font-family: 'Indie Flower', cursive;
+// font-family: 'Nanum Brush Script', cursive;
+// font-family: 'Gloria Hallelujah', cursive;
+// font-family: 'Handlee', cursive;
+// font-family: 'Arima Madurai', cursive;
+// font-family: 'Neucha', cursive;
+// font-family: 'Forum', cursive;
+// font-family: 'Raleway', sans-serif;
+// font-family: 'Pontano Sans', sans-serif;
 //Variable Declaration Zone
-$bg_main_img: "../img/keyboard-backlit.jpg";
-$overlay_tint_color: #59A3FC;
+$bg_main_img: "../img/computer-vectors.png";
+$bg_back_img: "../img/computer-screen.jpeg";
+$primary_color: #59A3FC;
+$light_gray: #999;
+$overlay_tint_color: linear-gradient(to bottom right,
+#59A3FC,
+rgb(94, 0, 138)); //black;
+$purple_for_tint: rgb(70, 70, 70);
 $light_font_color: white;
-.main-landing {   
-    position: relative;     
-    background: url($bg_main_img);
+body {
+    font-family: 'Pontano Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+.link-light,
+.link-light:active,
+.link-light:hover {
+    color: white;
+}
+
+.down-link {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    padding-top: 15px;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid $purple_for_tint;
+    bottom: -40vh;
+}
+
+.down-link:hover {
+    background: white;
+    color: rgb(174, 0, 255);
+}
+
+.text-hint {
+    color: $light_gray;
+}
+
+.main-landing {
+    position: relative;
+    background: url($bg_back_img);
     background-size: cover;
     background-position: center;
     height: 100vh;
     box-sizing: border-box;
-    .overlay {    
-        position: absolute;  
-        z-index: 0;          
+    .overlay {
+        position: absolute;
+        z-index: 0;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
-        background: $overlay_tint_color; 
-        opacity: 0.5;       
+        background: $overlay_tint_color;        
+        opacity: 0.75;
     }
-    .main-content {     
-        box-sizing: border-box;   
+    .main-content {
+        background: url($bg_main_img);
+        background-size: cover;
+        background-position: center;        
+        box-sizing: border-box;
         position: absolute;
-        width: 100%;                
-        border: 1px solid blue;
+        width: 100%;
         .container {
             height: 100vh;
-            padding-top: 25vh;  
+            padding-top: 25vh;
             .landing-content {
-                border-top: 5px solid $light_font_color;
+                color: $light_font_color;
+                text-align: center;
+                .logo-content {
+                    font-size: 2.5rem;                    
+                    border-bottom: 3px solid $light_font_color;
+                }
+                .event-name {
+                    font-size: 3.5rem;                    
+                }
+                .btn-outline-info {
+                    border-color: white;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+.video-section {
+    width: 100%;
+    height: 100vh;
+    .row {
+        .video-content {
+            height: 100vh;
+            padding-top: 20vh;
+            .video-box {
+                iframe.youtube-frame {
+                    border: 0;
+                    box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+                    width: 100%;
+                    height: 350px;
+                }
+            }
+        }
+        .text-content {
+            height: 100vh;
+            padding-top: 25vh;
+        }
+    }
+}
+
+.description-section {
+    width: 100%;
+    height: 100vh;
+    min-height: 550px;
+    background: $overlay_tint_color;
+    color: $light_font_color;
+    font-size: 1.2rem;
+    .container {
+        .prize-description {
+            background: $light_font_color;
+            color: $purple_for_tint;            
+            box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+            height: 60vh;
+            min-height: 450px;
+            padding: 0;             
+            .item {
+                height: 100%;                
+                text-align: center;                
+                .header {    
+                    font-size: 1.35em;                
+                    font-weight: bold;                    
+                }
+                .description {
+                    font-size: 0.85em;
+                }
+                .list {
+                    list-style: none;
+                    padding: 0;
+                    li {
+                        font-size: .90em;                        
+                    }
+                }
+            } .item:hover {
+                box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+                transform: translate3d(0,0,50px);                
             }
         }
     }
