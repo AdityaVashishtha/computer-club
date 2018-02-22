@@ -18,11 +18,18 @@ $light_gray: #999;
 $overlay_tint_color: linear-gradient(to bottom right,
 #59A3FC,
 rgb(94, 0, 138)); //black;
-$purple_for_tint: rgb(70, 70, 70);
+$purple_for_tint: rgb(70,
+70,
+70);
 $light_font_color: white;
 body {
     font-family: 'Pontano Sans', sans-serif;
     font-family: 'Raleway', sans-serif;
+    font-family: 'Arima Madurai', cursive;
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Nanum Brush Script', cursive;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Handlee', cursive; //font-family: 'Arima Madurai', cursive;                
 }
 
 .link-light,
@@ -32,19 +39,8 @@ body {
 }
 
 .down-link {
-    position: absolute;
-    width: 75px;
-    height: 75px;
-    padding-top: 15px;
+    position: relative;
     text-align: center;
-    border-radius: 50%;
-    border: 2px solid $purple_for_tint;
-    bottom: -40vh;
-}
-
-.down-link:hover {
-    background: white;
-    color: rgb(174, 0, 255);
 }
 
 .text-hint {
@@ -65,32 +61,37 @@ body {
         bottom: 0;
         left: 0;
         right: 0;
-        background: $overlay_tint_color;        
+        background: $overlay_tint_color;
         opacity: 0.75;
     }
     .main-content {
         background: url($bg_main_img);
         background-size: cover;
-        background-position: center;        
+        background-position: center;
         box-sizing: border-box;
         position: absolute;
         width: 100%;
         .container {
             height: 100vh;
-            padding-top: 25vh;
+            padding-top: 15vh;
             .landing-content {
                 color: $light_font_color;
                 text-align: center;
                 .logo-content {
-                    font-size: 2.5rem;                    
+                    font-size: 2rem;
                     border-bottom: 3px solid $light_font_color;
                 }
                 .event-name {
-                    font-size: 3.5rem;                    
+                    font-size: 3rem;
+                    border-right: 2px solid $light_font_color;
                 }
-                .btn-outline-info {
-                    border-color: white;
-                    color: white;
+                @media (max-width: 768px) {
+                    .event-name {
+                        border-right: 0;
+                    }
+                }
+                .text-content {
+                    font-size: 1.25em;
                 }
             }
         }
@@ -101,9 +102,8 @@ body {
     width: 100%;
     height: 100vh;
     .row {
-        .video-content {
+        .video-content {            
             height: 100vh;
-            padding-top: 20vh;
             .video-box {
                 iframe.youtube-frame {
                     border: 0;
@@ -115,7 +115,23 @@ body {
         }
         .text-content {
             height: 100vh;
-            padding-top: 25vh;
+        }
+        @media (max-width: 768px) {
+            .video-content {                
+                padding-top: 25vh;
+                height: 100vh;                
+            }
+            .text-content {                
+                height: 100vh;                
+            }
+        }
+        @media (max-width: 768px) {
+            .video-content {                                
+                height: 20vh;                
+            }
+            .text-content {                
+                height: 30vh;                
+            }
         }
     }
 }
@@ -130,17 +146,17 @@ body {
     .container {
         .prize-description {
             background: $light_font_color;
-            color: $purple_for_tint;            
+            color: $purple_for_tint;
             box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
             height: 60vh;
             min-height: 450px;
-            padding: 0;             
+            padding: 0;
             .item {
-                height: 100%;                
-                text-align: center;                
-                .header {    
-                    font-size: 1.35em;                
-                    font-weight: bold;                    
+                height: 100%;
+                text-align: center;
+                .header {
+                    font-size: 1.35em;
+                    font-weight: bold;
                 }
                 .description {
                     font-size: 0.85em;
@@ -149,12 +165,26 @@ body {
                     list-style: none;
                     padding: 0;
                     li {
-                        font-size: .90em;                        
+                        font-size: .90em;
                     }
                 }
-            } .item:hover {
+            }
+            .item:hover {
                 box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
-                transform: translate3d(0,0,50px);                
+                transform: translate3d(0, 0, 50px);
+            }
+            @media (max-width: 768px) {
+                .item {                                                 
+                    background: $light_font_color;
+                    border: 1px solid $light_gray;
+                    margin: 10px;
+                }
+            }
+        }
+        @media (max-width: 768px) {
+            .prize-description {
+                background: transparent;                
+                box-shadow: 0 0 0 0;
             }
         }
     }
