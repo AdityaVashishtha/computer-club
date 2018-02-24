@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css?family=Arima+Madurai|Handlee|Indie+Flower|Pontano+Sans|Raleway");
+@import url("https://fonts.googleapis.com/css?family=Comfortaa|Courgette|Exo|Permanent+Marker|Satisfy");
+body {
+  font-family: 'Handlee', cursive; }
+
+.link-light,
+.link-light:active,
+.link-light:hover {
+  background: transparent;
+  color: white; }
+
+.down-link {
+  position: relative;
+  text-align: center; }
+
+.text-hint {
+  color: #999; }
+
+.main-landing {
+  position: relative;
+  background: url("../img/computer-screen.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  box-sizing: border-box; }
+  .main-landing .overlay {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom right, #E44424, #8400ff);
+    opacity: 0.75; }
+  .main-landing .main-content {
+    background: url("../img/computer-vectors.png");
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%; }
+    .main-landing .main-content .container {
+      height: 100vh;
+      padding-top: 15vh; }
+      @media (max-width: 768px) {
+        .main-landing .main-content .container {
+          padding-top: 5vh; } }
+      .main-landing .main-content .container .landing-content {
+        color: white;
+        text-align: center; }
+        .main-landing .main-content .container .landing-content .logo-content {
+          font-size: 2rem;
+          border-bottom: 3px solid white; }
+        .main-landing .main-content .container .landing-content .event-name {
+          font-size: 3rem;
+          border-right: 2px solid white; }
+        @media (max-width: 768px) {
+          .main-landing .main-content .container .landing-content .event-name {
+            border-right: 0; } }
+        .main-landing .main-content .container .landing-content .text-content {
+          font-size: 1.25em; }
+
+.video-section {
+  width: 100%;
+  min-height: 700px;
+  padding: 2rem;
+  padding-top: 4rem; }
+  .video-section .row .video-content {
+    padding-top: 4rem; }
+    .video-section .row .video-content .video-box iframe.youtube-frame {
+      border: 0;
+      box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 350px; }
+    @media (max-width: 768px) {
+      .video-section .row .video-content .video-box {
+        padding-left: 10%; }
+        .video-section .row .video-content .video-box iframe.youtube-frame {
+          width: 80%; } }
+  @media (max-width: 768px) {
+    .video-section .row .video-content {
+      padding: 0;
+      padding-top: 2.5rem;
+      min-height: 250px; }
+    .video-section .row .text-content {
+      min-height: 400px; } }
+
+.description-section {
+  width: 100%;
+  min-height: 720px;
+  background: linear-gradient(to bottom right, #E44424, #8400ff);
+  color: white;
+  font-size: 1.2rem; }
+  .description-section .container {
+    box-sizing: border-box; }
+    .description-section .container .prize-description {
+      color: #464646;
+      width: 100%;
+      min-height: 450px;
+      padding: 1rem; }
+      .description-section .container .prize-description .item {
+        background: white;
+        height: 100%;
+        box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        padding: 2em;
+        margin-bottom: 1rem; }
+        .description-section .container .prize-description .item .header {
+          font-size: 1.35em;
+          font-weight: bold; }
+        .description-section .container .prize-description .item .description {
+          font-size: 0.85em; }
+        .description-section .container .prize-description .item .list {
+          list-style: none;
+          padding: 0; }
+          .description-section .container .prize-description .item .list li {
+            font-size: .90em; }
+      .description-section .container .prize-description .item:hover {
+        transform: translate3d(0, 0, 50px); }
+    @media (max-width: 768px) {
+      .description-section .container .prize-description {
+        box-shadow: 0 0 0 0; } }
